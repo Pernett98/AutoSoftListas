@@ -27,7 +27,7 @@ public class Archivo {
             PrintWriter printWriter = new PrintWriter(fileWriter);
 
             for (Iterator iterator = listaEmpleados.iterator(); iterator.hasNext();) {
-                frmEmpleados empleados = (frmEmpleados) iterator.next();
+                Empleados empleados = (Empleados) iterator.next();
                 printWriter.println(empleados);
             }
 
@@ -53,7 +53,7 @@ public class Archivo {
 
                 while ((linea = bufferReader.readLine()) != null) {
                     String[] campoEmpleado = linea.split(" ");
-                    frmEmpleados empleados = new frmEmpleados(campoEmpleado[0], Integer.parseInt(campoEmpleado[1]), campoEmpleado[2], campoEmpleado[3], campoEmpleado[4], Integer.parseInt(campoEmpleado[5]), Integer.parseInt(campoEmpleado[6]), campoEmpleado[7], campoEmpleado[8], campoEmpleado[9], campoEmpleado[10], campoEmpleado[11], campoEmpleado[12], campoEmpleado[13]);
+                    Empleados empleados = new Empleados(campoEmpleado[0], campoEmpleado[1], campoEmpleado[2], campoEmpleado[3], campoEmpleado[4],campoEmpleado[5],campoEmpleado[6], campoEmpleado[7], campoEmpleado[8], campoEmpleado[9], campoEmpleado[10], campoEmpleado[11], campoEmpleado[12], campoEmpleado[13], campoEmpleado[14]);
                     listaEmpleados.insertarAlfinal(empleados);
                 }
             }

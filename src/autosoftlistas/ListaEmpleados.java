@@ -15,7 +15,7 @@ public class ListaEmpleados {
         nroNodos = 0;
     }
 
-    public void insertarAlfinal(frmEmpleados empleados) {
+    public void insertarAlfinal(Empleados empleados) {
         Nodo p = new Nodo();
 
         p.info = empleados;
@@ -32,7 +32,7 @@ public class ListaEmpleados {
         nroNodos++;
     }
 
-    public frmEmpleados infoEnPosicion(int pos) {
+    public Empleados infoEnPosicion(int pos) {
         Nodo t = cab;
         if (pos <= nroNodos) {
             for (int i = 1; i < pos; i++) {
@@ -67,7 +67,7 @@ public class ListaEmpleados {
 
 
 
-    public Iterator<frmEmpleados> iterator() {
+    public Iterator<Empleados> iterator() {
         return new IteradorLista();
     }
 
@@ -81,8 +81,8 @@ public class ListaEmpleados {
         }
 
         @Override
-        public frmEmpleados next() {
-            frmEmpleados empleados = actual.info;
+        public Empleados next() {
+            Empleados empleados = actual.info;
             actual = actual.sig;
             return empleados;
         }
@@ -90,7 +90,7 @@ public class ListaEmpleados {
 
     private static class Nodo {
 
-        private frmEmpleados info;
+        private Empleados info;
         private Nodo sig, ant;
     }
 }

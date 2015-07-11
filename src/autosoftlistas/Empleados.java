@@ -4,15 +4,15 @@ package autosoftlistas;
  *
  * @author Velasquez
  */
-public class frmEmpleados {
+public class Empleados {
 
     private String ID;
-    private int cargo;
+    private String cargo;
     private String nombre;
     private String apellido;
     private String fechaNacimiento;
-    private int genero;
-    private int estadoCivil;
+    private String genero;
+    private String estadoCivil;
     private String telefono;
     private String celular;
     private String pais;
@@ -20,10 +20,14 @@ public class frmEmpleados {
     private String ciudad;
     private String direccion;
     private String correo;
-    
-    public frmEmpleados(String ID, int cargo,String nombre, String apellido, String fechaNacimiento, int genero, int estadoCivil, String telefono, String celular, String pais, String departamento, String ciudad, String direccion, String correo){
+    private String clave;
+
+    public Empleados(String ID, String cargo, String nombre, String apellido,
+            String fechaNacimiento, String genero, String estadoCivil,String correo, String telefono,
+            String celular, String pais, String departamento, String ciudad,
+            String direccion, String clave) {
         this.ID = ID;
-        this.cargo=cargo;
+        this.cargo = cargo;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
@@ -36,17 +40,18 @@ public class frmEmpleados {
         this.ciudad = ciudad;
         this.direccion = direccion;
         this.correo = correo;
+        this.clave = clave;
     }
 
-    frmEmpleados() {
+    Empleados() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int getCargo() {
+    public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(int cargo) {
+    public void setCargo(String cargo) {
         this.cargo = cargo;
     }
 
@@ -82,19 +87,19 @@ public class frmEmpleados {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public int getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(int genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
-    public int getEstadoCivil() {
+    public String getEstadoCivil() {
         return estadoCivil;
     }
 
-    public void setEstadoCivil(int estadoCivil) {
+    public void setEstadoCivil(String estadoCivil) {
         this.estadoCivil = estadoCivil;
     }
 
@@ -153,9 +158,17 @@ public class frmEmpleados {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
-    public String toString(){
-        return ID + " " + cargo + "" + nombre + " " + apellido + " " + fechaNacimiento + " " + genero + " " + estadoCivil + " " + telefono + " " + celular + " " + pais + " " + departamento + " " + ciudad + " " + direccion + " " + correo;
+
+      public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    public String toString() {
+        return ID + " " + cargo + "" + nombre + " " + apellido + " " + fechaNacimiento + " " + genero + " " + estadoCivil + " " + correo + " " +  telefono + " " + celular + " " + pais + " " + departamento + " " + ciudad + " " + direccion + " " + clave;
     }
 
     void show() {
